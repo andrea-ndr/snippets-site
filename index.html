@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of ready-to-copy snippets">
+    <title>Searchable snippet list</title>
+    <link rel="preload" as="style" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="modulepreload" href="./snippets.mjs">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Searchable snippet list</h1>
+        <input type="search" id="searchbar" placeholder="Search here" tabindex="1">
+        <div id="filters">
+            <input id="descriptionstoggle" type="checkbox" name="descriptions" checked>
+            <label for="descriptionstoggle">Descriptions</label>
+        </div>
+        <div id="counter"></div>
+        <div id="snippetwrapper"></div>
+    </div> <!-- wrapper -->
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

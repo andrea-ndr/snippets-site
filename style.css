@@ -1,0 +1,123 @@
+:root {
+        font-size: 16px;
+
+        --main-text-color: white;
+        --code-text-color: #39FF14;
+        --main-text-font-family: "DejaVu Sans", sans;
+        --code-text-font-family: "DejaVu Mono", monospace;
+}
+
+body {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        background-color: #333;
+        font-family: var(--main-text-font-family);
+        margin: 0;
+        min-width: 400px;
+}
+
+#wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 80%;
+}
+
+h1 {
+        font-size: 2rem;
+        font-weight: normal;
+        color: var(--main-text-color);
+        text-align: center;
+}
+
+#searchbar {
+        margin-top: 20px;
+        width: 40%; /* Fallback */
+        width: max(40%, 300px);
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+}
+
+#filters {
+        margin-top: 10px;
+        color: var(--main-text-color);
+        padding-top: 3px;
+        padding-bottom: 10px;
+        user-select: none;
+}
+
+#counter {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+        color: var(--main-text-color);
+}
+
+#snippetwrapper {
+        margin-top: 2px;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+}
+
+.snippetbox {
+        flex: 1 1 30%;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: #262626;
+        margin: 10px;
+        border: 1px solid #777;
+        max-width: calc(100% - 20px);   /* Subtract margins */
+}
+
+.snippetbox:focus {
+        border: 1px solid #FFF;
+        box-shadow: 0 0 10px 0 #FFF888;
+}
+
+.title {
+        padding: 10px;
+        color: var(--main-text-color);
+        background: linear-gradient(0.25turn, #111, #262626);
+        text-transform: capitalize;
+        white-space: pre;
+        overflow: auto;
+}
+
+.body {
+        margin: 10px;
+        padding: 10px 5px;
+        color: var(--code-text-color);
+        font-family: var(--code-text-font-family);
+        white-space: pre;
+        font-size: 0.8rem;
+        overflow: auto;
+        background-color: #111;
+        cursor: copy;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        /* transition: background-color 0.16s; */
+}
+
+.body::selection {
+        color: black;
+        background-color: var(--code-text-color);
+}
+
+.body:active {
+        background-color: #555;
+}
+
+.description {
+        font-size: 0.8rem;
+        margin: 5px;
+        padding: 5px;
+        color: var(--main-text-color);
+        background-color: #444;
+        flex-grow: 1;
+        overflow: auto;
+}
